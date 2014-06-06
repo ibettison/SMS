@@ -1,0 +1,595 @@
+/*
+LESS file - sms.less
+*/
+/* PAGE SETTINGS _____________________________
+*/
+
+/* PAGE VARIABLES */
+@page-margin   		: 0px;
+@page-colour   		: #000;
+@page-padding  		: 5px;
+@page-width	   		: 96%;
+@page-height   		: 91%;
+@page-font	   		: arial;
+@page-font-size		: 11px;
+
+
+body, html {
+	margin: @page-margin;
+	color: @page-colour;
+	font-family: @page-font;
+	font-size: @page-font-size;
+}
+
+#container {
+	width: @page-width;
+	height: @page-height;
+}
+
+/* PAGE - HEADER SETTINGS */
+
+/*HEADER VARIABLES*/
+@header-padding					: 5px;
+@header-background-color		: #202E45;
+@header-height					: 145px;
+@header-image					: transparent url('images/top.png') no-repeat top left;
+@header-border					: 1px solid #555;
+@header-outer-border			: 1px solid #fff;
+@header-font-family				: Verdana, Geneva, Arial, Helvetica, sans-serif;
+
+@media print {
+	.noprint {
+		display:none;
+	}
+}
+
+
+.header {
+   	padding-top:@header-padding;
+	float:left;
+	height: @header-height;
+	color: #444444;
+	font-family: @header-font-family;
+	font-size: 30px;
+	background: @header-image;
+	width:100%;
+}
+
+.header-position {
+	display:inline;
+	padding-left: 270px;
+	padding-top: 100px;
+}
+
+.logoffbtn {
+	float: right;
+	display:inline;
+	width: 90px;
+	height: 30px;
+	border: 0px;	
+	padding-top: 7px;
+	padding-left: 40px;
+	padding-right: 60px;
+	background: transparent url('images/logoff-icon.png') no-repeat top left;
+	align: bottom;
+}
+
+.logoff-link {
+	font-family: arial;
+	font-size: 15px;
+	color: #444444;
+}
+
+a.logoff-link:link,  a.logoff-link:visited, a.logoff-link:hover{
+	color: #999999;
+	text-decoration: none;
+}
+
+a.logoff-link:hover{
+	text-decoration: underline;
+}
+
+.subheader  {
+	float: left;
+	padding-top: @header-padding;
+	font-family: @header-font-family;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* PAGE - FOOTER SETTINGS */
+
+/* CONTACT VARIABLES */
+@background-color: #76B5DA;
+
+.contact {
+	float: left;
+	width: 100%;
+	height: 135px;
+	background-color: @background-color;
+	font-family: arial;
+	font-size: 9px;
+	color: #000;
+
+
+}
+
+.contactleft {
+	text-align: left;
+	float: left;
+	padding-left: 10%;
+	width: 42%;
+	
+}
+
+.contactcenter {
+	text-align: left;
+	float: left;
+	width: 40%;
+		
+}
+.contactright {
+	float: left;
+	width:15%;
+	text-align: left;
+}
+
+/* PAGE - LEFT SIDE PANEL
+
+SIDE PANEL VARIABLES*/
+@sp-width: 26%;
+@sp-height: 86.5%;
+@sp-colour: #202E45;
+@sp-background-colour: #202E45;
+@sp-box-margin: 5px;
+
+
+/* SIDEBAR VARIABLES */
+@sb-background-colour: #b0e1f9;
+@sb-colour: #ff8000;
+@sb-padding-top: 10px;
+@sb-font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+
+.sidebar{
+	width: 100%;
+	height: 105px;
+	background-color: @sb-background-colour;
+	font-family: @sb-font-family;
+	color: @sb-colour;
+	padding-top: @sb-padding-top;
+	text-align: center;
+}
+.sidebarline {
+	/*border-left: 1px solid #eee;
+	border-right: 1px solid #eee;*/
+	background-color: @sb-background-colour;
+}
+
+.sideimg {
+	width: 100%;
+	background-color: @sb-background-colour;
+	text-align: center;
+	padding-top: 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.sidebox {
+	width: 35%;
+	margin: @sp-box-margin;
+	background-color: #fff;
+	border: 1px solid @sp-colour;
+}
+
+.sideline {
+	width: 35%;
+	border-top: 1px solid @sp-colour;
+}
+
+/* PAGE - MAIN SETTINGS
+
+MAIN VARIABLES */
+@main-height: 88%;
+@main-width: 95%;
+@main-infobar-background: #FFFFCC;
+@main-infobar-border: 1px solid #fada58;
+@main-content-padding: 20%;
+
+.main {
+	position: relative;
+	float:left;
+	padding-top:1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom:10px;
+	height: @main-height;
+	width: @main-width;
+	background: transparent url('Images/cube.jpg') repeat;
+
+}
+
+.info {
+	padding-left: 30px;
+}
+
+.content_box {
+	width: 60%;
+	font-family: arial;
+	font-size: 11px;
+	padding: @page-padding;
+	margin-left: @main-content-padding;
+	background-color: @sp-background-colour;
+	border:	3px solid #DDD;
+		
+}
+
+.row_border {
+	margin-left:20px;
+	width: 75%;
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #FFF;
+	border-top: 1px solid #7EA0C8;
+	border-bottom: 1 px solid #DDD;
+}
+
+.row {
+	font-family: arial;
+	font-size: 11px;
+	width:100%;	
+	border-top: 1px solid #fff;
+	
+}
+
+.left, .right {
+	display:inline;
+	font-size: 12px;
+	padding-top: @page-padding  + 5px;
+	padding-bottom: @page-padding + 5px ;
+	width: 49%;
+}
+
+
+.clear {
+	clear:both;
+}
+
+
+/* END OF PAGE SETTINGS______________________
+*/
+
+/* SETTINGS FOR THE FLEXIPAGE PAGER JQUERY ___________________________
+*/
+
+
+.pager {
+  overflow:hidden;
+  padding-top:1em;
+}
+
+.pager li{
+  float:left;
+  list-style-type:none;
+  margin-right:.3em;
+  font-size:1.1em;
+}
+
+
+/* FORM SETTINGS_____________________________
+	FORM VARIABLES*/
+	@blue-input: #D8E8F3;
+	@input-select-background: #fbeb7d;
+	@input-select-border: 1px solid #fcd069;
+	@checkbox-border: 1px dashed #fcd069;
+	@blue-input-select-border: 1px solid #86B5D9;
+	@prompt-colour: #2694EA;
+	@green-input-select-border: 1px solid #009d00;
+	@green-input-background: #00dd00;
+	@red-input-select-border: 1px solid #ff0606;
+	@red-input-background: #ce0000;
+
+.form_prompt {
+	display:inline-block;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:11px;
+	color: @prompt-colour;
+	width:145px;
+	padding: 5px;
+}
+
+.form_field {
+	display:inline;
+}
+
+.login_form {
+	margin:10px;
+	padding:5px;
+	background-color:#cceeff;
+	border: 1px solid #c2d2d2;
+}
+
+@input-border-colour: #2694EA;
+@input-colour: #62BBE8;
+.greyInput, .blueinput, .greyTextAreaInput, .inputselected, .textAreaSelected, .greenInput, .redInput, .cb_field_delete, .cb_template, .cb_question_delete, .cb_field_search{
+	margin:3px;
+	margin-left:7px;
+	padding-left: 5px;
+	padding-top: 5px;
+	font-family: arial;
+	font-size:11px;
+	color: #222;
+	border: 1px solid @input-border-colour;
+}
+
+.greyTextAreaInput {
+	background-color:@input-colour;
+}
+
+.greyInput {
+	background-color:@input-colour;
+	height:25px;
+}
+
+.cb_field_delete, .cb_template, .cb_question_delete, .cb_field_search {
+	background-color:@input-colour;
+	height:25px;
+}
+
+.blueinput { 
+	background-color: @blue-input;
+	height:25px;
+}
+
+.greenInput {
+	border: @green-input-select-border;
+	background-color: @green-input-background;
+	height: 25px;
+}
+
+.redInput {
+	border: @red-input-select-border;
+	background-color: @red-input-background;
+	height: 25px;
+}
+
+.inputselected{
+	background-color: @input-select-background;
+	border: @input-select-border;
+	height:25px;
+}
+
+.textAreaSelected {
+	background-color: @input-select-background;
+	border: @input-select-border;
+
+}
+
+.addNote {
+	background: transparent url('Images/note_icon_small.png') no-repeat top left;
+	margin:10px;
+	font-family: arial;
+	font-size:14px;
+	background-color:@blue-input;
+	padding-left:30px;
+	padding-top:5px;
+	height:30px;
+	border: @blue-input-select-border;
+}
+
+.addRecord {
+	background: transparent url('Images/add-button.png') no-repeat center left;
+	margin-left:10px;
+	margin-right: 5px;
+	font-family: arial;
+	font-size:14px;
+	background-color:@blue-input;
+	padding-left:30px;
+	padding-top:7px;
+	height:30px;
+	border: @blue-input-select-border;
+}
+
+#tabId {
+	width: 100%;
+}
+
+fieldset {
+	padding:10px;
+	margin-bottom: 5px;
+	border: 1px solid @input-border-colour;
+}
+
+legend {
+	padding: 5px;
+	color: @input-border-colour;
+	/*background: #000;
+	border: 1px solid #ffffdd;*/
+	font-family: arial;
+	font-size: 18px;
+} 
+
+.clinbox {
+	height: 180px;
+	background: transparent url('Images/notesdoc.gif') no-repeat top right;
+	background-color: #fff;
+	/*border: 1px solid #7EA0C8;*/
+	
+}
+
+.clinnotes {
+	padding: 5px;
+	background-color: #d8e8f3;
+	font-family: arial;
+	font-size: 10px;
+}
+
+
+.columns {
+	column-count: 5;
+	column-gap: 15px;
+}
+
+.column_setup, .colone, .coltwo {
+	float: left;
+	width: 40%;
+	margin-left:10px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-family: arial;
+	font-size: 10px;
+}
+
+.coltwo {
+	padding-left: 20px;	
+}
+
+.colthree {
+	.column_setup;
+}
+
+.colfour{
+	.column_setup;
+
+}
+
+.colfive{
+	.column_setup;
+}
+
+/* Style for survey questions for smoking status */
+
+.question_width {
+	width: 62%;
+}
+
+.odd, .even {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #7EA0C8;
+}
+.odd {
+	background: #D8E8F3;
+}
+
+.even {
+	background: #DDD;
+	
+}
+
+.left {
+	width: 400px;
+	float:left;
+	padding:5px;
+	
+}
+
+
+.right {
+	width:200px;
+	float:right;
+}
+
+.bluebutton {
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #555;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+	position: relative;
+	cursor: pointer;
+}
+/* .bluebutton {
+	/*background: transparent url('images/button_background.png') repeat-x;
+	margin-top: 10px;
+	height: 27px;
+	color: #000;
+	padding-left: 3px;
+	text-align: center;
+	border: 1px solid #555;
+}*/
+
+.check_header {
+	.form_prompt;	
+	color: #444;
+
+}
+
+.check_left {
+	padding-left: 132px;
+}
+.check_span {
+	padding-right: 55px;
+}
+
+.check_body {
+	.form_prompt;
+	width:190px;
+}
+
+.check_box {
+	padding-right:70px;
+}
+
+.sorted, .searchlist {
+	list-style-type: none;
+	width: 70%;
+}
+
+.searchlist {
+	width: 910px;
+}
+
+.sorted li {
+	cursor: move;
+}
+
+
+/* END OF FORM SETTINGS_____________________
+*/
+
+/*SEARCH Settings ___________________________
+*/
+	@search-header-background: #666;
+	@search-header-border: 1px solid #bbb;
+	@search-header-colour: #f8da07;
+	@search-background: #777;
+	@search-border: 1px solid #333;
+	@search-colour: #3a3a3a;
+	@sent-colour: #769298;
+	@white: #fff;
+	@grey: #aaa;
+
+.searchHeader, .searchBody, .sentBody {
+	display: inline-block;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: @search-header-colour;
+	background-color: @search-header-background;
+	border-left: @search-header-border;
+	border-bottom: @search-header-border;
+	border-top: 1px solid @search-border;
+	border-right: 1px solid @search-border;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.searchBody, .sentBody {
+	background-color: @search-background;
+	border-left: @search-header-border;
+	border-bottom: @search-header-border;
+	border-top: 1px solid @search-border;
+	border-right: 1px solid @search-border;
+	color: @search-colour;
+	font-weight: normal;
+	text-decoration:none;
+}
+
+.sentBody {
+	background-color: @sent-colour;
+	color: @grey;
+}
+
+/* END OF SEARCH SETTINGS___________________
+*/
+ 
+
